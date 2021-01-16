@@ -1,6 +1,6 @@
 const express = require('express');
 const { Telegraf } = require('telegraf');
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 const app = express();
 dotenv.config();
