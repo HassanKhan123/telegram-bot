@@ -12,6 +12,6 @@ bot.on('sticker', (ctx) => ctx.reply('👍'));
 bot.hears('hi', (ctx) => ctx.reply('Hey there'));
 bot.launch();
 
-app.listen(process.env.port || 5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log('Server running');
 });
