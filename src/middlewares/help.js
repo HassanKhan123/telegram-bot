@@ -1,4 +1,4 @@
-module.export = help = (ctx) => {
+module.exports = help = (ctx) => {
   const user = ctx.message?.from;
 
   return ctx.reply(`Available commands: \n /webaccess`, {
