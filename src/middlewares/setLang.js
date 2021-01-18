@@ -1,4 +1,4 @@
-const Languages = require('../languages');
+const { getByName } = require('../languages');
 
 // import { updateLanguage } from '../services/users';
 
@@ -9,7 +9,7 @@ const setPreferredLang = async (ctx) => {
   const telegramId = (ctx.message.from && ctx.message.from.id) || 0;
   if (telegramId == 0) throw Error('Not sender user found');
 
-  const lang = Languages.getByName(ctx.message.text || '');
+  const lang = getByName(ctx.message.text || '');
   console.log(telegramId, lang);
   if (lang) {
     // await updateLanguage(telegramId, lang.code);
