@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 // const Languages = require('./src/languages');
 const help = require('./src/middlewares/help');
-const getWebAccessToken = require('./middlewares/webaccess');
+const getWebAccessToken = require('./src/middlewares/webaccess');
 
 const app = express();
 dotenv.config();
