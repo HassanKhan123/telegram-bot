@@ -1,4 +1,4 @@
-import Languages from '../languages';
+const Languages = require('../languages');
 
 // import { updateLanguage } from '../services/users';
 
