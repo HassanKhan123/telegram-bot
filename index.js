@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 // const Languages = require('./src/languages');
 const help = require('./src/middlewares/help');
 const getWebAccessToken = require('./src/middlewares/webaccess');
+const setPreferredLang = require('./src/middlewares/setLang');
 
 const app = express();
 dotenv.config();
