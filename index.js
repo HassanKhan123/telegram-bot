@@ -2,12 +2,16 @@ const express = require('express');
 const { Telegraf } = require('telegraf');
 const dotenv = require('dotenv');
 
+// const Languages = require('./src/languages');
+const { help } = require('./src/middlewares/help');
+
 const app = express();
 dotenv.config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.start((ctx) => ctx.reply('Welcome'));
-bot.help((ctx) => ctx.reply('Send me a sticker'));
+// bot.help((ctx) => ctx.reply('Send me a sticker'));
+bot.help(help);
 bot.on('sticker', (ctx) => ctx.reply('👍'));
 bot.hears('hi', (ctx) => ctx.reply('Hey there'));
 bot.command('oldschool', (ctx) => ctx.reply('Hello'));
